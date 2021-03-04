@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - klturismo</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+<body>
+    <header>
+        <div class="max-width">
+            <nav class="container-nav-header">
+
+            </nav>
+        </div>
+    </header>
+    <div class="">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="">
+        <div class="">
+            &copy; 2021 - klturismo
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>
