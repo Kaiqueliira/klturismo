@@ -1,3 +1,5 @@
+using System;
+
 namespace klturismo.Models
 {
     public class Usuario
@@ -7,6 +9,6 @@ namespace klturismo.Models
         public string Login {get;set;}
 
         public string Senha{get;set;}
-        public string DataNascimento{get;set;}
+        public DateTime DataNascimento{get;set;}
     }
 }

@@ -9,6 +9,8 @@
 }
 body{
   background-color: #FFF;
+  width: 100%;
+  height: 100%;
 }
 body > header{
   width: 100%;
@@ -18,11 +20,13 @@ body > header{
   position: fixed;
   top: 0;
   left: 0;
+  border-bottom: 1px solid crimson;
 }
 .max-width{
   max-width: 1300px;
   padding: 20px;
   margin: 0 auto;
+  height: 100%;
 }
 .container-nav-header{
   width: 100%;
@@ -36,15 +40,18 @@ body > header{
 .container-nav-header > ul > li{
   margin: 0 15px;
 }
+.container-nav-header > ul > li:hover{
+  border:3px solid crimson;
+  border-radius: 10px;
+  
+}
 .container-nav-header > ul > li>a{
   text-transform: uppercase;
   color: #000;
   padding: 5px;
 }
 .container-nav-header > ul > li:last-child{
-  border-radius: 10px;
-  border:1px solid crimson;
-  padding: 5px;
+  border-bottom:3px solid crimson;
 }
 
 .inicio{
@@ -90,15 +97,18 @@ body > header{
   color: #fff;
 }
 
-.pacotes{
+.pacotes, .login{
   background-color: #e2e2e2;
 }
 
-.pacotes-container{
+
+.pacotes-container, .login-container{
   display: flex;
-  margin: 80px 0;
   flex-flow:column wrap;
   align-items: center;
+}
+.pacotes-container:first-child, .login-container:first-child{
+  margin-top: 50px;
 }
 .title-section{
   padding: 20px;
@@ -135,6 +145,62 @@ body > header{
 .card-container p{
   text-align: justify;
 }
+.login{
+  height: calc(100vh - 25px);
+}
+.login-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-40px);
+}
+.login-container > form{
+  border:3px solid #fff ;
+  display: flex;
+  flex-flow: column wrap;
+  width: 300px;
+  padding: 20px;
+  
+}
+.login-container > form label{
+  font-size: 15px;
+  font-weight: 650;
+
+}
+.login-container > form input{
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 17px;
+  font-weight: 650;
+  border:1px solid rgb(220, 20, 60, 0.5);
+}
+.btn{
+    width: 100px;
+    position: relative;
+    left: 155px;
+    background-color: crimson;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    color:#FFF;
+}
+.login-container > form a{
+  position: relative;
+  bottom: 60px;
+  color: crimson;
+  width: 90px;
+}
+.btn-cadastrar{
+  background-color: crimson;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
+    color:#FFF;
+}
 footer{
+  border-top: 1px solid crimson;
   text-align: center;
 }
