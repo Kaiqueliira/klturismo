@@ -20,7 +20,6 @@ C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.TagHelpers.i
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.TagHelpers.output.cache
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.RazorCoreGenerate.cache
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -35,3 +34,6 @@ C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.dll
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.pdb
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.genruntimeconfig.cache
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\klturismo.csproj.CopyComplete
+C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Pacote.cshtml.g.cs
+C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Sistema\Cadastro.cshtml.g.cs
+C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Sistema\Login.cshtml.g.cs

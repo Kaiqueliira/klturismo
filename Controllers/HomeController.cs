@@ -23,7 +23,7 @@ namespace klturismo.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Pacote()
         {
             return View();
         }
