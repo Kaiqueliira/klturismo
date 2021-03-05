@@ -89,6 +89,52 @@ body > header{
   border-radius: 20px ;
   color: #fff;
 }
+
+.pacotes{
+  background-color: #e2e2e2;
+}
+
+.pacotes-container{
+  display: flex;
+  margin: 80px 0;
+  flex-flow:column wrap;
+  align-items: center;
+}
+.title-section{
+  padding: 20px;
+}
+.pacotes-content{
+  margin: 20px 0;
+  
+}
+.cards-pacotes{
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+}
+.card{
+  border:2px solid crimson;
+  width: 300px;
+  margin: 20px 20px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+.header-card{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+
+}
+.card-container{
+  padding: 10px;
+}
+.card-container h3, .card-container p{
+  margin: 5px 0;
+} 
+.card-container p{
+  text-align: justify;
+}
 footer{
   text-align: center;
 }
