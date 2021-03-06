@@ -38,3 +38,4 @@ C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Home\Pacot
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Sistema\Login.cshtml.g.cs
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Sistema\CadastroUsuario.cshtml.g.cs
 C:\Users\Kaique\Desktop\klturismo\obj\Debug\netcoreapp3.1\Razor\Views\Sistema\CadastroPacotes.cshtml.g.cs
+C:\Users\Kaique\Desktop\klturismo\bin\Debug\netcoreapp3.1\MySqlConnector.dll

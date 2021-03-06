@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "klturismo/1.0.0": {
         "dependencies": {
+          "MySqlConnector": "1.2.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -312,6 +313,17 @@
         },
         "compile": {
           "klturismo.dll": {}
+        }
+      },
+      "MySqlConnector/1.2.1": {
+        "runtime": {
+          "lib/netcoreapp3.1/MySqlConnector.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/MySqlConnector.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -2013,6 +2025,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MySqlConnector/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B+uQUXBhWibjQBaOe+GXXTEm573HGQU2M2NR8BKdyEEBxzGui8OVTL+dtW5Jg4FwovvW4Y1uMOKeBdmI5tQltA==",
+      "path": "mysqlconnector/1.2.1",
+      "hashPath": "mysqlconnector.1.2.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

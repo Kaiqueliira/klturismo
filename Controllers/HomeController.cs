@@ -20,6 +20,8 @@ namespace klturismo.Controllers
 
         public IActionResult Index()
         {
+
+            UsuarioRepository.TestarConexao();
             return View();
         }
 

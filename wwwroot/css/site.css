@@ -40,11 +40,7 @@ body > header{
 .container-nav-header > ul > li{
   margin: 0 15px;
 }
-.container-nav-header > ul > li:hover{
-  border:3px solid crimson;
-  border-radius: 10px;
-  
-}
+
 .container-nav-header > ul > li>a{
   text-transform: uppercase;
   color: #000;
@@ -56,6 +52,7 @@ body > header{
 
 .inicio{
   width: 100%;
+  height: calc(100vh - 25px);
 }
 
 .conteudo-inicio{
@@ -98,7 +95,7 @@ body > header{
 }
 
 .pacotes, .login{
-  background-color: #e2e2e2;
+  background-color: #fff;
 }
 
 
@@ -127,17 +124,18 @@ body > header{
   width: 300px;
   margin: 20px 20px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0 ;
 
 }
 .header-card{
-  background-color: #fff;
+  background-color: rgb(196, 196, 196, 0.5);
   padding: 10px;
   border-radius: 10px 10px 0 0;
 
 }
 .card-container{
   padding: 10px;
+  background-color: #fafafa;
 }
 .card-container h3, .card-container p{
   margin: 5px 0;
@@ -156,7 +154,8 @@ body > header{
   transform: translateY(-40px);
 }
 .login-container > form{
-  border:3px solid #fff ;
+  background-color: rgb(255, 4, 4, 0.1);
+  border:2px solid #000 ;
   display: flex;
   flex-flow: column wrap;
   width: 300px;

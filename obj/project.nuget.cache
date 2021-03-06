@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lLD783NE2uWXS8w9lZ+v4dPNcGf0rBMOUcMbVO4XyVR+Q+0Gr5LRPCu9RIrptv8leasFo4Nu0Xuq157PnHWKPw==",
+  "dgSpecHash": "sRkSjzI9Sevom7f/HznL6ezpQ6X7H6JkjNIAIWUGYDTdSHjwqa1AyLorWE8fgv7hCjubhq3kUwS3KRncKLry7Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaique\\Desktop\\klturismo\\klturismo.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Kaique\\.nuget\\packages\\mysqlconnector\\1.2.1\\mysqlconnector.1.2.1.nupkg.sha512"
+  ],
   "logs": []
 }
