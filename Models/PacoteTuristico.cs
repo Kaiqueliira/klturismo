@@ -1,3 +1,5 @@
+using System;
+
 namespace klturismo.Models
 {
     public class PacoteTuristico
@@ -7,12 +9,10 @@ namespace klturismo.Models
         public string Nome{get;set;}
         public string Origem{get;set;}
         public string Destino{get;set;}
-        public string Atrativos{get;set;}
-        public string Saida{get;set;}
-        public string Retorno{get;set;}
+        public string Atrativo{get;set;}
+        public  DateTime Saida{get;set;}
+        public DateTime Retorno{get;set;}
         public int Usuario {get;set;}
-
-
     
     }
 }

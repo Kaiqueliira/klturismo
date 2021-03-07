@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<PacoteTuristico>
+
+@{
     ViewData["Title"] = "Pacotes";
 }
 <section class="pacotes">
@@ -9,91 +11,25 @@
             </h1>
             <div class="pacotes-content">
                 <div class="cards-pacotes">
-                    <div class="card">
-                        <header class="header-card">
-                            <h2 class="title-card">
-                                NOME DO PACOTE
-                            </h2>
-                        </header>
-                        <div class="card-container">
-                            <h3>ORIGEM: -------------</h3>
-                            <h3>Destino: -------------</h3>
-                            <p class="text-card">
-                                ATRATIVOS -------------- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Sapiente dolorem suscipit et fugiat, quasi voluptates consequuntur cum aliquam autem
-                                dicta, accusamus a eligendi laboriosam dolore necessitatibus deleniti. Quas, corporis
-                                numquam?
-                            </p>
+                    @foreach (PacoteTuristico item in Model)
+                    {
+                        <div class="card">
+                            <header class="header-card">
+                                <h2 class="title-card">
+                                    @item.Nome
+                                </h2>
+                            </header>
+                            <div class="card-container">
+                                <h3>ORIGEM: @item.Origem</h3>
+                                <h3>Destino: @item.Destino</h3>
+                                <p class="text-card">
+                                        @item.Retorno
+                                        @item.Saida
+                                        @item.Atrativo
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <header class="header-card">
-                            <h2 class="title-card">
-                                NOME DO PACOTE
-                            </h2>
-                        </header>
-                        <div class="card-container">
-                            <h3>ORIGEM: -------------</h3>
-                            <h3>Destino: -------------</h3>
-                            <p class="text-card">
-                                ATRATIVOS -------------- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Sapiente dolorem suscipit et fugiat, quasi voluptates consequuntur cum aliquam autem
-                                dicta, accusamus a eligendi laboriosam dolore necessitatibus deleniti. Quas, corporis
-                                numquam?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <header class="header-card">
-                            <h2 class="title-card">
-                                NOME DO PACOTE
-                            </h2>
-                        </header>
-                        <div class="card-container">
-                            <h3>ORIGEM: -------------</h3>
-                            <h3>Destino: -------------</h3>
-                            <p class="text-card">
-                                ATRATIVOS -------------- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Sapiente dolorem suscipit et fugiat, quasi voluptates consequuntur cum aliquam autem
-                                dicta, accusamus a eligendi laboriosam dolore necessitatibus deleniti. Quas, corporis
-                                numquam?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <header class="header-card">
-                            <h2 class="title-card">
-                                NOME DO PACOTE
-                            </h2>
-                        </header>
-                        <div class="card-container">
-                            <h3>ORIGEM: -------------</h3>
-                            <h3>Destino: -------------</h3>
-                            <p class="text-card">
-                                ATRATIVOS -------------- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Sapiente dolorem suscipit et fugiat, quasi voluptates consequuntur cum aliquam autem
-                                dicta, accusamus a eligendi laboriosam dolore necessitatibus deleniti. Quas, corporis
-                                numquam?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <header class="header-card">
-                            <h2 class="title-card">
-                                NOME DO PACOTE
-                            </h2>
-                        </header>
-                        <div class="card-container">
-                            <h3>ORIGEM: -------------</h3>
-                            <h3>Destino: -------------</h3>
-                            <p class="text-card">
-                                ATRATIVOS -------------- Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Sapiente dolorem suscipit et fugiat, quasi voluptates consequuntur cum aliquam autem
-                                dicta, accusamus a eligendi laboriosam dolore necessitatibus deleniti. Quas, corporis
-                                numquam?
-                            </p>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

@@ -19,15 +19,18 @@ namespace klturismo.Controllers
         }
 
         public IActionResult Index()
-        {
+        {   
 
             UsuarioRepository.TestarConexao();
+            
             return View();
         }
 
         public IActionResult Pacote()
         {
-            return View();
+            PacoteRepository pacote = new PacoteRepository();
+            List<PacoteTuristico> lista = pacote.Listar();
+            return View(lista);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

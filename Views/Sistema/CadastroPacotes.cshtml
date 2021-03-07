@@ -1,3 +1,30 @@
+@model PacoteTuristico
+
 @{
     ViewData["Title"] = "Cadastro Pacotes";
 }
+
+<section class="login">
+    <div class="max-width">
+        <div class="login-container">
+            <form method="POST">
+                <label >Nome</label>
+                <input asp-for="Nome">
+                <label >Origem</label>
+                <input asp-for="Origem">
+                <label >Destino</label>
+                <input asp-for="Destino">
+                <label >Atrativos</label>
+                <input asp-for="Atrativo">
+                <label >Saida</label>
+                <input asp-for="Saida" type="Date">
+                <label >Retorno</label>
+                <input asp-for="Retorno" type="Date">
+                <label >Usuario</label>
+                <input asp-for="Usuario">
+                <input class="btn-cadastrar" type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </div>
+
+</section>

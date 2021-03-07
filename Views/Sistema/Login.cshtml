@@ -1,3 +1,5 @@
+@model Usuario
+
 @{
     ViewData["Title"] = "Login";
 }
@@ -5,12 +7,14 @@
     <div class="max-width">
         <div class="login-container">
             <form method="POST">
-                <label for="login">Login</label>
-                <input type="text">
+                <label for="Login">Login</label>
+                <input asp-for="Login"type="text">
                 <label for="Senha">Senha</label>
-                <input type="password">
+                <input asp-for="Senha"type="password">
+                @ViewBag.Mensagem
                 <input class="btn" type="submit" value="Entrar">
                 <a asp-action="CadastroUsuario" asp-controller="Sistema">Cadastre-se</a>
+
             </form>
         </div>
     </div>

@@ -10,16 +10,21 @@ namespace klturismo.Models
         public static void TestarConexao(){
 
             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
-            Conexao.Open();
-            Console.Write("BANCO DE DADOS FUNCIONANDO!!!!");
-            Conexao.Close();
+
+            
+                Conexao.Open();
+                Console.Write("BANCO DE DADOS FUNCIONANDO!!!!");
+                Conexao.Close();
+            
+           
         }
 
 
         public Usuario FazerLogin(Usuario user){
+            
             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
             Conexao.Open();
-            string Query = "SELECT * FROM Usuario WHERE Login = @Loogin And Senha = @Senha";
+            string Query = "SELECT * FROM usuario WHERE login=@Login And senha=@Senha;";
 
             MySqlCommand ComandoQuery = new MySqlCommand(Query, Conexao);
             ComandoQuery.Parameters.AddWithValue("@Login", user.Login);
@@ -43,11 +48,25 @@ namespace klturismo.Models
             Conexao.Close();
             
             return UsuarioEncontrado;
-
-
-
-
         }
+
+        public void CadastrarUsuario(Usuario user){
+
+             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
+            string Query = "INSERT INTO usuario(nome, login, senha, dataNascimento) VALUES (@Nome, @Login, @Senha, @DataNascimento);";
+
+            MySqlCommand ComandoQuery = new MySqlCommand(Query, Conexao);
+
+            ComandoQuery.Parameters.AddWithValue("@Login", user.Login);
+            ComandoQuery.Parameters.AddWithValue("@Nome", user.Nome);
+            ComandoQuery.Parameters.AddWithValue("@Senha", user.Senha);
+            ComandoQuery.Parameters.AddWithValue("@DataNascimento", user.DataNascimento);
+          
+            ComandoQuery.ExecuteNonQuery();
+            Conexao.Close();
+        }
+        
 
 
     }

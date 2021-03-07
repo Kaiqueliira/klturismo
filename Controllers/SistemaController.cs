@@ -1,3 +1,4 @@
+using klturismo.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace klturismo.Controllers
@@ -7,20 +8,68 @@ namespace klturismo.Controllers
         public IActionResult Login()
         {
 
+
             return View();
         }
+        [HttpPost]
+        public IActionResult Login(Usuario user)
+        {
+            UsuarioRepository userbd = new UsuarioRepository();
+            Usuario userEncontrado = userbd.FazerLogin(user);
 
-        public IActionResult Cadastro()
+            if (userEncontrado != null)
+            {
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+
+                ViewBag.Mensagem = "FALHA NO LOGIN";
+                return View();
+            }
+
+        }
+
+
+        public IActionResult CadastroPacotes()
         {
 
             return View();
         }
 
-    public IActionResult CadastroUsuario()
-            {
+        [HttpPost]
+        public IActionResult CadastroPacotes(PacoteTuristico pacote)
+        {
 
-                return View();
-            }
+            PacoteRepository pacotebd = new PacoteRepository();
+            pacotebd.Inserir(pacote);
 
+            return RedirectToAction("Pacote", "Home");
         }
+
+
+
+
+        public IActionResult CadastroUsuario()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult CadastroUsuario(Usuario user)
+        {
+
+            UsuarioRepository userbd = new UsuarioRepository();
+            userbd.CadastrarUsuario(user);
+
+            return RedirectToAction("Login", "Sistema");
+        }
+
+
+
+
+
+    }
 }
