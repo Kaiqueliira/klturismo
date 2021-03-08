@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using klturismo.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace klturismo.Controllers
 {
@@ -21,11 +22,10 @@ namespace klturismo.Controllers
         public IActionResult Index()
         {   
 
-            UsuarioRepository.TestarConexao();
-            
             return View();
         }
 
+        
         public IActionResult Pacote()
         {
             PacoteRepository pacote = new PacoteRepository();

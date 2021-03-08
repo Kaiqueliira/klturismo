@@ -10,7 +10,7 @@ namespace klturismo.Models
         public string Origem{get;set;}
         public string Destino{get;set;}
         public string Atrativo{get;set;}
-        public  DateTime Saida{get;set;}
+        public DateTime Saida{get;set;}
         public DateTime Retorno{get;set;}
         public int Usuario {get;set;}
     

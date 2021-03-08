@@ -75,21 +75,64 @@ namespace klturismo.Models
 
             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
             Conexao.Open();
-            string Query = "UPDATE pacotes SET nome=@Nome, origem=@Origem, destino=@Destino, saida=@Saida, retorno=@Retorno, usuario=@Usuario WHERE id=@Id;";
+            string Query = "UPDATE pacotes SET nome=@Nome, origem=@Origem, destino=@Destino, atrativo=@Atrativo, saida=@Saida, retorno=@Retorno, usuario=@Usuario WHERE id=@Id;";
 
             MySqlCommand ComandoQuery = new MySqlCommand(Query, Conexao);
 
             ComandoQuery.Parameters.AddWithValue("@Nome", pacote.Nome);
             ComandoQuery.Parameters.AddWithValue("@Origem", pacote.Origem);
             ComandoQuery.Parameters.AddWithValue("@destino", pacote.Destino);
-            ComandoQuery.Parameters.AddWithValue("@atrativo", pacote.Atrativo);
-            ComandoQuery.Parameters.AddWithValue("@saida", pacote.Saida);
-            ComandoQuery.Parameters.AddWithValue("@retorno", pacote.Retorno);
-            ComandoQuery.Parameters.AddWithValue("@usuario", pacote.Usuario);
+            ComandoQuery.Parameters.AddWithValue("@Atrativo", pacote.Atrativo);
+            ComandoQuery.Parameters.AddWithValue("@Saida", pacote.Saida);
+            ComandoQuery.Parameters.AddWithValue("@Retorno", pacote.Retorno);
+            ComandoQuery.Parameters.AddWithValue("@Usuario", pacote.Usuario);
             ComandoQuery.Parameters.AddWithValue("@Id", pacote.Id);
 
             ComandoQuery.ExecuteNonQuery();
             Conexao.Close();
+        }
+
+        public PacoteTuristico BuscarPorId(int Id){
+          
+            MySqlConnection Conexao = new MySqlConnection(DadosConexao);
+            Conexao.Open();
+            string Query = "Select * FROM pacotes WHERE id=@Id;";
+
+            MySqlCommand ComandoQuery = new MySqlCommand(Query, Conexao);
+            ComandoQuery.Parameters.AddWithValue("@Id", Id);
+            
+            MySqlDataReader DadosEncontrados = ComandoQuery.ExecuteReader();
+
+            PacoteTuristico PacoteEncontrado = null;
+
+            if(DadosEncontrados.Read()){
+
+                PacoteEncontrado = new PacoteTuristico();
+                PacoteEncontrado.Id = DadosEncontrados.GetInt32("Id");
+
+                if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Nome")))
+                PacoteEncontrado.Nome =  DadosEncontrados.GetString("Nome");
+
+                if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Origem")))
+                PacoteEncontrado.Origem =  DadosEncontrados.GetString("Origem");
+
+                if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Destino")))
+                PacoteEncontrado.Destino =  DadosEncontrados.GetString("Destino");
+
+                if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Atrativo")))
+                PacoteEncontrado.Atrativo =  DadosEncontrados.GetString("Atrativo");
+
+                 if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Saida")))
+                PacoteEncontrado.Saida =  DadosEncontrados.GetDateTime("Saida");
+
+                 if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetOrdinal("Retorno")))
+                PacoteEncontrado.Retorno =  DadosEncontrados.GetDateTime("Retorno"); 
+               
+                if(!DadosEncontrados.IsDBNull(DadosEncontrados.GetInt32("Usuario")))
+                PacoteEncontrado.Usuario =  DadosEncontrados.GetInt32("Usuario"); 
+            }
+            Conexao.Close();
+            return(PacoteEncontrado);
         }
 
 
@@ -97,7 +140,7 @@ namespace klturismo.Models
 
             MySqlConnection Conexao = new MySqlConnection(DadosConexao);
             Conexao.Open();
-            string Query = "DELET FROM pacotes WHERE id=@Id;";
+            string Query = "DELETE FROM pacotes WHERE id=@Id;";
 
             MySqlCommand ComandoQuery = new MySqlCommand(Query, Conexao);
             ComandoQuery.Parameters.AddWithValue("@Id", Id);

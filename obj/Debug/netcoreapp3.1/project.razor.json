@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Kaique\\Desktop\\klturismo\\Views\\Sistema\\EditarPacotes.cshtml",
+      "TargetPath": "Views\\Sistema\\EditarPacotes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Kaique\\Desktop\\klturismo\\Views\\Home\\Pacote.cshtml",
       "TargetPath": "Views\\Home\\Pacote.cshtml",
       "FileKind": "mvc"

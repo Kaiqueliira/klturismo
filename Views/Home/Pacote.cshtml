@@ -1,4 +1,5 @@
-﻿@model List<PacoteTuristico>
+﻿@using Microsoft.AspNetCore.Http
+@model List<PacoteTuristico>
 
 @{
     ViewData["Title"] = "Pacotes";
@@ -23,10 +24,15 @@
                                 <h3>ORIGEM: @item.Origem</h3>
                                 <h3>Destino: @item.Destino</h3>
                                 <p class="text-card">
-                                        @item.Retorno
-                                        @item.Saida
-                                        @item.Atrativo
+                                    <span>Retorno:@item.Retorno</span>  
+                                    <span>Saída:@item.Saida</span>  
+                                    <p><h3>ATRATIVOS:</h3>@item.Atrativo</p>
                                 </p>
+                                @if(Context.Session.GetInt32("IdUsuario") != null){
+
+                                <a href="/Sistema/EditarPacotes?Id=@item.Id">Editar Pacote</a>
+                                <a href="/Sistema/RemoverPacote?Id=@item.Id">Remover</a>
+                                }
                             </div>
                         </div>
                     }

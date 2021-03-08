@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -22,6 +24,13 @@
                      <li>
                         <a asp-action="Login" asp-controller="Sistema">Login</a>
                     </li>
+                    @if(Context.Session.GetInt32("IdUsuario") != null)
+                        {
+                     <li>
+                        <a asp-action="CadastroPacotes" asp-controller="Sistema">Cadastro de Pacotes</a>
+                    </li>     
+                        <span>Olá, @Context.Session.GetString("NomeUsuario") </span> <a asp-action="Logout" asp-controller="Sistema"> Logout</a>
+                    }
                 </ul>
             </nav>
         </div>
